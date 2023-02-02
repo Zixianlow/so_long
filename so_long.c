@@ -6,7 +6,7 @@
 /*   By: lzi-xian <lzi-xian@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 11:01:30 by lzi-xian          #+#    #+#             */
-/*   Updated: 2023/01/11 13:47:07 by lzi-xian         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:15:04 by lzi-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,22 +43,20 @@ int	exit_hook(t_solong *vars)
 int	ft_animate(t_solong *vars)
 {
 	vars->frame++;
+	if (vars->frame == 1)
+		ft_get_image_s1(vars);
+	else if (vars->frame == 2500)
+		ft_get_image_s2(vars);
+	else if (vars->frame == 5000)
+		ft_get_image_s3(vars);
+	else if (vars->frame >= 7500)
+		vars->frame = 0;
 	if (vars->frame % 500 == 1)
 	{
 		mlx_clear_window(vars->mlx, vars->win);
 		ft_render_map(*vars);
 		ft_put_moves_count(*vars);
 	}
-	if (vars->frame == 1)
-		ft_get_image(vars);
-	else if (vars->frame == 2500)
-		ft_get_image_s2(vars);
-	else if (vars->frame == 5000)
-		ft_get_image_s3(vars);
-	else if (vars->frame == 7500)
-		ft_get_image(vars);
-	else if (vars->frame == 10000)
-		vars->frame = 0;
 	return (0);
 }
 

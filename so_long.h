@@ -6,7 +6,7 @@
 /*   By: lzi-xian <lzi-xian@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:10:01 by lzi-xian          #+#    #+#             */
-/*   Updated: 2023/01/11 12:53:36 by lzi-xian         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:20:34 by lzi-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,23 +38,18 @@ typedef struct s_solong{
 	char	*end_path;
 	char	*player_path;
 	char	*enemy_path;
-	char	*star_path1;
-	char	*end_path1;
-	char	*player_path1;
-	char	*enemy_path1;
 	char	*star_path2;
 	char	*end_path2;
 	char	*player_path2;
 	char	*enemy_path2;
 	char	*star_path3;
-	char	*end_path3;
 	char	*player_path3;
 	char	*enemy_path3;
 	void	*pic_wall;
 	void	*pic_ground;
 	void	*pic_star;
 	void	*pic_end;
-	void	*pic_player;
+	void	*pic_play;
 	void	*pic_enemy;
 	char	**map_d;
 	int		map_h;
@@ -74,10 +69,12 @@ typedef struct s_solong{
 	t_enemy	*enemy;
 }	t_solong;
 
+void	ft_destroy_image(t_solong *img);
 void	ft_get_map(t_solong *vars, char **av);
 void	ft_set_n_check_map_hw(t_solong **vars, int h, int l);
 void	ft_file_name_check(char *av);
 void	ft_get_image(t_solong *vars);
+void	ft_get_image_s1(t_solong *img);
 void	ft_get_image_s2(t_solong *img);
 void	ft_get_image_s3(t_solong *img);
 void	ft_render_map(t_solong v);

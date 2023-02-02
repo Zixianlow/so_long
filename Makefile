@@ -6,7 +6,7 @@
 #    By: lzi-xian <lzi-xian@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 11:17:50 by lzi-xian          #+#    #+#              #
-#    Updated: 2023/01/17 16:29:12 by lzi-xian         ###   ########.fr        #
+#    Updated: 2023/01/18 14:23:58 by lzi-xian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,14 @@ GCC			=	gcc
 	${GCC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	${OBJS}
-	${GCC} ${CFLAGS} -lmlx -framework OpenGL -framework AppKit -lz ${OBJS} ${LIBFT} -o ${SL_NAME}
+	touch $(NAME)
+	cp ${LIBFT} .
+	mv libft.a $(NAME)
+	${ARCR} ${NAME} ${OBJS}
+	make run
+
+run:
+	${GCC} ${CFLAGS} -lmlx -framework OpenGL -framework AppKit -lz $(NAME) -o ${SL_NAME}
 
 all:	$(NAME)
 
