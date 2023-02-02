@@ -6,7 +6,7 @@
 /*   By: lzi-xian <lzi-xian@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:07:25 by lzi-xian          #+#    #+#             */
-/*   Updated: 2023/01/17 16:24:04 by lzi-xian         ###   ########.fr       */
+/*   Updated: 2023/01/18 14:12:25 by lzi-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_move_up(t_solong *vars)
 	vars->p_pos_y--;
 	vars->moves++;
 	ft_put_moves_count(*vars);
+	ft_printf("Move count : %d\n", vars->moves);
 }
 
 void	ft_move_left(t_solong *vars)
@@ -58,6 +59,7 @@ void	ft_move_left(t_solong *vars)
 	vars->p_pos_x--;
 	vars->moves++;
 	ft_put_moves_count(*vars);
+	ft_printf("Move count : %d\n", vars->moves);
 }
 
 void	ft_move_down(t_solong *vars)
@@ -82,6 +84,7 @@ void	ft_move_down(t_solong *vars)
 	vars->p_pos_y++;
 	vars->moves++;
 	ft_put_moves_count(*vars);
+	ft_printf("Move count : %d\n", vars->moves);
 }
 
 void	ft_move_right(t_solong *vars)
@@ -106,4 +109,5 @@ void	ft_move_right(t_solong *vars)
 	vars->p_pos_x++;
 	vars->moves++;
 	ft_put_moves_count(*vars);
+	ft_printf("Move count : %d\n", vars->moves);
 }

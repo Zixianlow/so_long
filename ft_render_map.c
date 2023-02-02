@@ -6,7 +6,7 @@
 /*   By: lzi-xian <lzi-xian@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 17:58:07 by lzi-xian          #+#    #+#             */
-/*   Updated: 2023/01/11 11:34:03 by lzi-xian         ###   ########.fr       */
+/*   Updated: 2023/01/18 13:28:31 by lzi-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_render_epn(t_solong v, int i, int j)
 	if (v.map_d[i][j] == 'P')
 	{
 		mlx_put_image_to_window(v.mlx, v.win, v.pic_ground, n, m);
-		mlx_put_image_to_window(v.mlx, v.win, v.pic_player, n, m);
+		mlx_put_image_to_window(v.mlx, v.win, v.pic_play, n, m);
 	}
 	if (v.map_d[i][j] == '2')
 	{

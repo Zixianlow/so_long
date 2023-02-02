@@ -6,7 +6,7 @@
 /*   By: lzi-xian <lzi-xian@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 17:11:58 by lzi-xian          #+#    #+#             */
-/*   Updated: 2023/01/10 19:10:31 by lzi-xian         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:55:25 by lzi-xian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_slgameover_free_n_exit(t_solong **vars)
 		free(temp);
 		(*vars)->n--;
 	}
-	ft_printf("GAME OVER!!!");
+	ft_printf("GAME OVER!!!\n");
 	mlx_destroy_window((*vars)->mlx, (*vars)->win);
 	exit(0);
 }
@@ -49,7 +49,7 @@ void	ft_slgamewon_free_n_exit(t_solong **vars)
 		free(temp);
 		(*vars)->n--;
 	}
-	ft_printf("You have won the game!!!");
+	ft_printf("You have won the game!!!\n");
 	mlx_destroy_window((*vars)->mlx, (*vars)->win);
 	exit(0);
 }
